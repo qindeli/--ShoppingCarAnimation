@@ -84,7 +84,7 @@
     [cell setShoppingCarButtonDidClickHandle:^(CGPoint centerPoint) {
         
         //起点
-        CGPoint startPoint = centerPoint;
+        CGPoint startPoint = [tableView convertPoint:centerPoint toView:self.view];;
         //控点
         CGPoint controlPoint = CGPointMake(_endPoint.x, startPoint.y);
         
